@@ -1,4 +1,5 @@
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+	console.log('test');
 	$stateProvider
 		.state('home', {
 			url: '/home',

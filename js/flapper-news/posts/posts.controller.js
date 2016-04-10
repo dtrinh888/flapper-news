@@ -1,5 +1,4 @@
 app.controller('PostsCtrl', ['$scope', 'posts', function($scope, posts){
-	$scope.test = 'Hello World';
 	
 	$scope.posts = posts.posts;
 

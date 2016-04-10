@@ -4,3 +4,4 @@ app.factory('posts', [function(){
 	};
 	return o;
 }]);
+

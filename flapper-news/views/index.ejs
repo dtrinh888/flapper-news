@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flapper News</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body ng-app="flapperNews">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<ui-view></ui-view>
+		</div>
+	</div>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	
+	<script src="javascripts/angularApp.js"></script>
+	<script src="javascripts/home/home.route.js"></script>
+	<script src="javascripts/home/main.controller.js"></script>
+	<script src="javascripts/posts/posts.factory.js"></script>
+	<script src="javascripts/posts/posts.route.js"></script>
+	<script src="javascripts/posts/posts.controller.js"></script>
+</body>
 </html>

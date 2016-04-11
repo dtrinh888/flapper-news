@@ -3,7 +3,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 	$stateProvider
 		.state('home', {
 			url: '/home',
-			templateUrl: 'js/flapper-news/home/home.html',
+			templateUrl: 'javascripts/home/home.html',
 			controller: 'MainCtrl'
 		});
 

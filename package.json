@@ -9,7 +9,7 @@
     "git:rebase": "npm run git:checkout:master && npm run git:rebase:gh-pages && npm run git:push:master && npm run git:checkout:gh-pages",
     "git:checkout:gh-pages": "git checkout gh-pages",
     "git:add": "git add .",
-    "git:commit": "git commit -m 'upvoting posts enabled'",
+    "git:commit": "git commit -m 'upvoting comments enabled'",
     "git:push:gh-pages": "git push origin gh-pages",
     "git:checkout:master": "git checkout master",
     "git:rebase:gh-pages": "git rebase gh-pages",
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/dtrinh888/flapper-news/issues"
   },
-  "homepage": "https://github.com/dtrinh888/flapper-news#readme"
+  "homepage": "https://github.com/dtrinh888/flapper-news#readme",
+  "dependencies": {
+    "mongoose": "^4.4.12"
+  }
 }

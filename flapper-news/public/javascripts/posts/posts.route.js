@@ -3,7 +3,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		.state('posts', {
 			url: '/posts/{id}',
 			templateUrl: 'javascripts/posts/posts.html',
-			controller: 'PostsCtrl'
+			controller: 'PostsCtrl',
+			resolve: {
+				post: ['stateParams', 'posts', function($stateParams, posts){
+					return posts.get($stateParams.id);
+				}]
+			}
 		});
 }]);
 	

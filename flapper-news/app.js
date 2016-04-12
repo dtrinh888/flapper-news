@@ -12,7 +12,7 @@ var mongoose = require('mongoose');
 require('./models/Posts');
 require('./models/Comments');
 
-mongoose.connect('monogodb://localhost/news');
+mongoose.connect('mongodb://localhost/news');
 
 var app = express();
 

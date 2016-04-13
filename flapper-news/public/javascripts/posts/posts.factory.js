@@ -1,14 +1,14 @@
 // needed to inject $http
-app.factory('posts', ['$http', [function($http){
+app.factory('posts', ['$http', function($http){
 	
 	var o = {
 		posts: [],
 	};
 	
 	// to retrieve posts in the posts service within angularApp.js
-	o.getall = function(){
+	o.getAll = function(){
 		return $http.get('/posts').success(function(data){
-			angular.copy(data. o.posts);
+			angular.copy(data, o.posts);
 		});
 	};
 
@@ -48,5 +48,5 @@ app.factory('posts', ['$http', [function($http){
 	
 	return o;
 
-}]]);
+}]);
 

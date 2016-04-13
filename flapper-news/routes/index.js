@@ -53,4 +53,11 @@ router.post('/login', function(req, res, next){
 	})(req, res, next);
 });
 
+var jwt = require('express-jwt');
+
+var auth = jwt({
+	secret: 'SECRET',
+	userProperty: 'payload'
+});
+
 module.exports = router;

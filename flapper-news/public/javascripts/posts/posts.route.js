@@ -5,7 +5,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 			templateUrl: 'javascripts/posts/posts.html',
 			controller: 'PostsCtrl',
 			resolve: {
-				post: ['stateParams', 'posts', function($stateParams, posts){
+				post: ['$stateParams', 'posts', function($stateParams, posts){
 					return posts.get($stateParams.id);
 				}]
 			}

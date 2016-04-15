@@ -4,6 +4,12 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Post = mongoose.model('Post');
 var Comment = mongoose.model('Comment');
+var jwt = require('express-jwt');
+
+var auth = jwt({
+	secret: 'SECRET',
+	userProperty: 'payload'
+});
 
 router.param('post', function(req, res, next, id){
 	var query = Post.findById(id);

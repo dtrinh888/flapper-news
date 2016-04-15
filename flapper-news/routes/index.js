@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var mongoose = require('mongoose');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -7,7 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 var passport = require('passport');
-var User = mongoose.modle('User');
+var User = mongoose.model('User');
 
 router.post('/register', function(req, res, next){
 	if(!req.body.username || !req.body.password){
@@ -53,11 +55,6 @@ router.post('/login', function(req, res, next){
 	})(req, res, next);
 });
 
-var jwt = require('express-jwt');
 
-var auth = jwt({
-	secret: 'SECRET',
-	userProperty: 'payload'
-});
 
 module.exports = router;

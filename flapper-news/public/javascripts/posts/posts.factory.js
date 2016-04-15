@@ -1,10 +1,9 @@
 // needed to inject $http
 app.factory('posts', ['$http', 'auth', function($http, auth){
-	
 	var o = {
 		posts: [],
 	};
-	
+
 	// to retrieve posts in the posts service within angularApp.js
 	o.getAll = function(){
 		return $http.get('/posts').success(function(data){
@@ -59,8 +58,6 @@ app.factory('posts', ['$http', 'auth', function($http, auth){
 			comment.upvotes += 1;
 		});
 	};
-	
+
 	return o;
-
 }]);
-

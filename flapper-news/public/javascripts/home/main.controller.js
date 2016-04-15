@@ -1,4 +1,6 @@
-app.controller('MainCtrl', ['$scope', 'posts', function($scope, posts){
+app.controller('MainCtrl', ['$scope', 'posts', 'auth', function($scope, posts, auth){
+	
+	$scope.isLoggedIn = auth.isLoggedIn();
 	
 	$scope.posts = posts.posts;
 

@@ -56,8 +56,8 @@ app.factory('auth', ['$http', 'window', function($http, $window){
 	// localStorage, logging the user out
 
 	auth.logOut = function(){
-		$window.localStorage.removeItem('flapper-news-token')
-	}
+		$window.localStorage.removeItem('flapper-news-token');
+	};
 
 	return auth;
 }]);

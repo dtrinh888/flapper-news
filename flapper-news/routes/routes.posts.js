@@ -109,4 +109,37 @@ router.get('/:post', function(req, res, next){
 	});
 });
 
+// require authentication for creating a post
+router.post('/posts', auth, function(req, res, next){
+
+});
+
+// require authentication for upvoting
+router.put('/posts/:post/upvote', auth, function(req, res, next){
+
+});
+
+// require authentication for commenting and set the author for comments
+router.post('/posts/:post/comments', auth, function(req, res, next){
+
+});
+
+// require authentication for upvoting comments
+router.put('posts/:post/comments/:comment/upvote', auth, function( req, res, next){
+
+});
+
+// set the author field when creating posts
+router.post('/posts', auth, function(req, res, next){
+	var post = new Post(req.body);
+	post.author = req.payload.username;
+});
+
+// set the author field when creating comments
+router.post('/posts/:post/comments', auth, function(req, res, next){
+	var comment = new Comment(req.body);
+	comment.post = req.post;
+	comment.author = req.payload.username;
+});
+
 module.exports = router;
